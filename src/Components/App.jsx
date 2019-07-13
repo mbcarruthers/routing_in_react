@@ -5,6 +5,7 @@ import Films from "./Films.jsx";
 import People from "./People.jsx";
 import Home from "./Home.jsx";
 import Film from "./Film.jsx";
+import Person from "./Person.jsx";
 
 import "isomorphic-fetch";
 import "es6-promise";
@@ -29,7 +30,8 @@ export default class App extends Component {
                         <Route exact path="/" component={ Home } />
                         <Route exact path="/people" component={ People } />
                         <Route exact path="/films" component={ Films } />
-                        <Route exact path="/films/:id" component={Film} />
+                        <Route exact path="/films/:id" component={ Film } />
+                        <Route exact path="/people/:id" component={ Person } />
                     </Switch>
                 </BrowserRouter>
             </div>
