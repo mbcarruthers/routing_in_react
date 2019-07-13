@@ -4,8 +4,15 @@ import NavBar from "./NavBar.jsx";
 import Films from "./Films.jsx";
 import People from "./People.jsx";
 import Home from "./Home.jsx";
+import "isomorphic-fetch";
+import "es6-promise";
+
 
 export default class App extends Component {
+    constructor(props) {
+        super(props);
+        console.log("This is not a useless constructor");
+    }
 
     render() {
         return(

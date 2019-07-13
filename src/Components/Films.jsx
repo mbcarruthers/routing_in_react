@@ -1,18 +1,54 @@
 import React , { Component } from "react";
-
+// TODO: figure out if it is better to have isomorphic-fetch
+// and es6-promise imported here instead of just including
+// them in the App component
 
 export default class Films extends Component {
     constructor( props ) {
         super(props);
+        this.state = {
+            films : []
+        }
     }
-    componentDidMount() {
 
+    componentDidMount() {
+        fetch("http://ghibliapi.herokuapp.com/films")
+            .then( (res) => {
+                return res.json();
+            }).then( (obj) => {
+               obj.forEach( (item) => {
+                   this.addFilm(item);
+               });
+        }).catch( (error) => {
+            console.log(`There was an ERROR!!! ${error}`);
+        })
     }
+
+    addFilm( film ) {
+        this.setState({
+            films : [film , ...this.state.films]
+        })
+    }
+
     render() {
+        const films = this.state.films.map( (film , index) => {
+            return(
+                <li key={index}>
+                    <div className="card mt-3 shadow-sm">
+                        <div className="card-title text-center"><h3>{film.title}</h3></div>
+                        <div className="card-body"><p>{film.description}</p></div>
+                        {/*<a href={film.people}>people</a>*/}
+                    </div>
+                </li>
+            )
+        });
         return(
             <div className="container-fluid text-center">
-                <h1>Films</h1>
+                <h4>Films</h4>
+                <ul className="list-unstyled">
+                    { films }
+                </ul>
             </div>
-        )
+        );
     }
 }
