@@ -11,7 +11,7 @@ export default class Films extends Component {
     render() {
         return(
             <div className="container-fluid text-center">
-
+                <h1>Films</h1>
             </div>
         )
     }
