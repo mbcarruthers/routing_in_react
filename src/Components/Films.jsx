@@ -39,7 +39,7 @@ export default class Films extends Component {
                 <li key={index}>
                     <div className="card mt-3 shadow-sm">
                         <div className="card-title text-center"><h3>{film.title}</h3></div>
-                        <Link  className="btn btn-primary m-3" to={`films/${film.id}`}>
+                        <Link  className="btn btn-outline-primary m-3" to={`films/${film.id}`}>
                             <p>{film.title}</p>
                         </Link>
                     </div>

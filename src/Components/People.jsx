@@ -35,7 +35,7 @@ export default class People extends Component {
             return(
                 <li key={index}>
                     <div className="card m-3 shadow text-center">
-                        <Link  className="btn btn-primary m-3" to={`people/${item.id}`}>
+                        <Link  className="btn btn-outline-primary m-3" to={`people/${item.id}`}>
                             <p>{item.name}</p>
                         </Link>
                     </div>

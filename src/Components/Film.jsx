@@ -20,7 +20,7 @@ export default class Film extends Component {
                 });
                 console.log(this.state.film);
         }).catch( (error) => {
-            console.log(`there was an error!@@@ ${error}`);
+            console.log(`there was an error!!!! ${error}`);
         })
     }
     render() {
