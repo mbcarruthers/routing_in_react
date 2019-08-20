@@ -1,9 +1,7 @@
 import React , { Component } from "react";
 import {Link} from "react-router-dom";
-
-// TODO: figure out if it is better to have isomorphic-fetch
-// and es6-promise imported here instead of just including
-// them in the App component
+import "isomorphic-fetch";
+import "es6-promise";
 
 export default class Films extends Component {
     constructor( props ) {

@@ -19,7 +19,7 @@ export default class App extends Component {
 
     render() {
         return(
-            <div className="container App">
+            <div className="container App" style={{ "font-family":"Avenir Next"}}>
                 <BrowserRouter>
                     <React.Fragment>
                         <div className="inline-block">

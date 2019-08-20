@@ -2,12 +2,11 @@ import React from "react";
 import { Nav } from "react-bootstrap";
 import Button from "./Button.jsx";
 
-// Should the button elements be changed to Nav.Links's??
-// TODO: figure that out , maybe
+
 
 const NavBar = () => {
     return(
-       <Nav className="justify-content-center border rounded">
+       <Nav className="justify-content-center border rounded-left mt-1">
            <Button text="Go Home" to="/"/>
            <Button text="View People" to="/people" />
            <Button text="View Films" to="/films"/>

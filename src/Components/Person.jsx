@@ -1,5 +1,6 @@
 import React , { Component } from "react";
-
+import "isomorphic-fetch";
+import "es6-promise";
 
 export default class Person extends Component {
     constructor( props ) {
@@ -27,8 +28,8 @@ export default class Person extends Component {
 
     render() {
         return(
-            <div className="card text-center">
-                <h6 className="card-title">{ this.state.person.name }</h6>
+            <div className="card text-center m-1">
+                <h4 className="card-title">{ this.state.person.name }</h4>
                 <div className="card-body">
                     <p> Gender: { this.state.person.gender }</p>
                     <p> Age: { this.state.person.age }</p>

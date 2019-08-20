@@ -1,5 +1,6 @@
 import React , { Component } from "react";
-
+import "isomorphic-fetch";
+import "es6-promise";
 
 export default class Film extends Component {
     constructor(props) {
